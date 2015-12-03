@@ -1,0 +1,15 @@
+{
+  "title": "Kill That Password Map",
+  "name": "killthatpasswordmap",
+  "version": "0.0.1",
+  "description": "Remove password map on http://card.sdu.edu.cn/",
+  "main": "index.js",
+  "author": "Charles Weng",
+  "engines": {
+    "firefox": ">=38.0a1"
+  },
+  "license": "MIT",
+  "keywords": [
+    "jetpack"
+  ]
+}
