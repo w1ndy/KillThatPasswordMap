@@ -1,5 +1,6 @@
 var pageMod = require("sdk/page-mod");
 var self = require("sdk/self");
+var ss = require("sdk/simple-storage");
 
 pageMod.PageMod({
     include: "http://card.sdu.edu.cn/",

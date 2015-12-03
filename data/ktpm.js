@@ -21,6 +21,15 @@ function hideKeypad() {
     killHandlers('btnWSTransfer');
     $('#txtWSTransferCardPwdClone').removeAttr('readonly');
     $("#btnWSTransferClone").on("click", request);
+
+    $("#checkXieYi").prop('checked', true);
+    if (localStorage.transferTo)
+        $('#selTransferTo').val(localStorage.transferTo);
+    if (localStorage.bankNo)
+        $('#txtWSTransferBankNo').val(localStorage.bankNo);
+    if (localStorage.amount)
+        $('#txtWSTransferAmount').val(localStorage.amount);
+
 }
 
 function encryptKeys(pwmap) {
@@ -102,6 +111,10 @@ function request() {
         ocrMap(img);
     };
     img.src = "/Account/GetNumKeyPadImg?" + Math.random();
+
+    localStorage.transferTo = $('#selTransferTo').val();
+    localStorage.bankNo = $('#txtWSTransferBankNo').val();
+    localStorage.amount = $('#txtWSTransferAmount').val();
 }
 
 $("#Pay #Transfer").click(function () {
